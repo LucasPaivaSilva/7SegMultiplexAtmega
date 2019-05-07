@@ -8,7 +8,7 @@
 #include "LCD.h"
 #include <avr/io.h>
 #include <avr/interrupt.h>
-int cont = 0;
+//int cont = 0;
 int x;
 int y = 0;
 unsigned char digits[4];
@@ -57,10 +57,9 @@ int main(void)
     while (1) 
     {
 	for(x=0;x<10000;x++)
-	{
-		cont++;					
-		ident_num(cont, digits);
-		_delay_ms(10);
+	{					
+		ident_num(x, digits);
+		_delay_ms(100);
 	}
 		
     }
